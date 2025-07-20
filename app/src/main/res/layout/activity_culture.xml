@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottomactivities.CultureActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/detailsCropImage"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"/>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:indeterminateTint="@color/colorBackground" />
+
+        <TextView
+            android:id="@+id/culture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Culture"
+            android:fontFamily="@font/google1"
+            android:letterSpacing="0.07"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:layout_below="@id/detailsCropImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/demo_text"
+            android:layout_below="@id/culture"
+            android:id="@+id/cropDetailsText"
+            android:padding="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:letterSpacing="0.06"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

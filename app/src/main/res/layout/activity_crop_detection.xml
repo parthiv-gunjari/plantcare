@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".bottomactivities.CropDetectionActivity">
+
+    <LinearLayout
+        android:id="@+id/rel1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/action_background"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take action"
+            android:textSize="17sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="16dp"/>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/camera"
+                android:fontFamily="@font/google1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/login_white_background">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:id="@+id/imageView"
+            android:scaleType="fitCenter"
+            android:src="@drawable/scan_leaf"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/demoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:fontFamily="@font/google1"
+                android:lineSpacingMultiplier="0.9"
+                android:text="@string/detect_txt_2"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:justificationMode="inter_word"
+                tools:targetApi="o" />
+
+            <ImageView
+                android:id="@+id/demoArrow"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:src="@drawable/arrow_below"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:rotation="-20"
+                android:visibility="gone"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your crop is:"
+                android:textSize="19sp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/classified"
+                android:fontFamily="@font/opensans_bold"
+                android:includeFontPadding="false"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFE500"
+                android:textSize="24sp"
+                android:id="@+id/result"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:fontFamily="@font/google1"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.06"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/confidencesText"-->
+<!--                android:text="Confidences:"-->
+<!--                android:fontFamily="@font/google1"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:letterSpacing="0.08"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textAllCaps="true" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="12sp"-->
+<!--                android:id="@+id/confidence"-->
+<!--                android:textAlignment="center"-->
+<!--                android:fontFamily="@font/google1"-->
+<!--                android:includeFontPadding="false" />-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/managementBtn"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#FFD557"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:visibility="visible">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/management_text"-->
+<!--                    android:textColor="@color/colorAccent"-->
+<!--                    android:fontFamily="@font/google1"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:letterSpacing="0.04"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    tools:targetApi="o" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Management"-->
+<!--                    android:background="@drawable/auth_button_style"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:fontFamily="@font/google1"-->
+<!--                    android:letterSpacing="0.08"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:layout_marginStart="36dp"-->
+<!--                    android:layout_marginEnd="36dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:id="@+id/management_button"-->
+<!--                    android:visibility="visible"/>-->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

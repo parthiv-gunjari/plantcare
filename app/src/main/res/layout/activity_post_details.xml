@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".bottomactivities.PostDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedLay"
+        android:layout_above="@id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/post_detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/post_details_user_hint"
+                android:text="Posted by:"
+                android:textColor="@color/black"
+                android:fontFamily="@font/opensans_medium"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.04"
+                android:textSize="14sp"
+                android:layout_below="@id/post_detail_img"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/post_details_user_name"
+                android:text="User name"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:fontFamily="@font/opensans_regular"
+                android:includeFontPadding="false"
+                android:layout_below="@id/post_detail_img"
+                android:layout_toEndOf="@id/post_details_user_hint"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/post_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Title Here"
+                android:textColor="@color/black"
+                android:fontFamily="@font/opensans_bold"
+                android:includeFontPadding="false"
+                android:textSize="17sp"
+                android:letterSpacing="0.04"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/post_details_user_name"/>
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/post_detail_date_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/ggray"
+                android:fontFamily="@font/opensans_light"
+                android:layout_below="@id/post_detail_title"
+                tools:text="18 jan 2018" />
+
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/opensans_regular"
+                android:lineSpacingExtra="4dp"
+                android:id="@+id/post_detail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/post_detail_date_name"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingMultiplier="0.7"
+                android:text="" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/post_detail_user_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/ggray"
+                app:civ_border_width="1dp"
+                android:layout_toEndOf="@id/post_details_user_name"
+                android:layout_alignTop="@id/post_details_user_name"
+                android:layout_alignBottom="@id/post_details_user_name"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="12sp"
+                android:letterSpacing="0.04"
+                android:textColor="@color/ggray"
+                android:layout_below="@id/post_detail_desc"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:id="@+id/comment_text"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/comment_text"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_detail_currentuser_img"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/ggray"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:hint="Type something.."
+            android:background="@drawable/edittext_button_style_rounded"
+            android:id="@+id/post_detail_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:layout_toStartOf="@id/post_detail_add_comment_btn"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/ggray"
+            android:textSize="14sp"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_toEndOf="@id/post_detail_currentuser_img"/>
+
+        <ImageButton
+            android:id="@+id/post_detail_add_comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/send_icon"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "183985202847",
+    "firebase_url": "https://bartalap-f2b56.firebaseio.com",
+    "project_id": "bartalap-f2b56",
+    "storage_bucket": "bartalap-f2b56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183985202847:android:7334d467eb3a4444c8e4aa",
+        "android_client_info": {
+          "package_name": "com.codewithgolap.samadhan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183985202847-38r6l1fhgvjvklu1kc9m68mnh4nkg3tt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codewithgolap.samadhan",
+            "certificate_hash": "8b983f4a73e4b57a4a023275a2fb47f903646823"
+          }
+        },
+        {
+          "client_id": "183985202847-njd1rbnddh48i9amng0jakfgb8hira5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmVlGeq5iZAU4AlqO3Bh3ckFIT3g7q6HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183985202847-njd1rbnddh48i9amng0jakfgb8hira5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183985202847:android:016ec1bdca06493cc8e4aa",
+        "android_client_info": {
+          "package_name": "com.example.bartalap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183985202847-fs5mmgipv71q322nkmofhc0lqcmg4mqe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bartalap",
+            "certificate_hash": "49429800c8588dfa3972411d666d9169471fa399"
+          }
+        },
+        {
+          "client_id": "183985202847-njd1rbnddh48i9amng0jakfgb8hira5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmVlGeq5iZAU4AlqO3Bh3ckFIT3g7q6HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183985202847-njd1rbnddh48i9amng0jakfgb8hira5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

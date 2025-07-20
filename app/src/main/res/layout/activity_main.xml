@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBgColor"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plantcare_logo"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/toolBar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/healTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/opensans_bold"
+                android:includeFontPadding="false"
+                android:text="Detect disease from your crop"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.06"/>
+
+            <TextView
+                android:id="@+id/availableCrops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/healTime"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/opensans_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.08"
+                android:lineSpacingMultiplier="0.9"
+                android:text="@string/available_crops"
+                android:textAlignment="inherit"
+                android:textColor="@color/defaultColor"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+            <RelativeLayout
+                android:id="@+id/healRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availableCrops"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/second_card_back"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/appleLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_centerHorizontal="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/leaf_detection" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Take a picture"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/next" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/get_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Get the result"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/next" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/dia_remove"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Get\ndiagnosis"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/detectBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_below="@id/appleLinear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/take_picture_button_style"
+                    android:fontFamily="@font/opensans_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.07"
+                    android:text="Take a picture"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cropIdentifyText"
+                android:layout_below="@id/healRelative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/opensans_bold"
+                android:textAllCaps="true"
+                android:includeFontPadding="false"
+                android:text="Identify crop by leaf"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:letterSpacing="0.06"/>
+
+            <TextView
+                android:id="@+id/availableLeafCrops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cropIdentifyText"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/opensans_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.08"
+                android:lineSpacingMultiplier="0.9"
+                android:text="@string/available_crops_by_leaf"
+                android:textAlignment="inherit"
+                android:textColor="@color/defaultColor"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+            <RelativeLayout
+                android:id="@+id/identifyRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availableLeafCrops"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/second_card_back"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_centerHorizontal="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/maple_leaf" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Take a leaf picture"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/next" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/get_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Get the result"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/detectBtn_for_crop"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_below="@id/linear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/take_picture_button_style"
+                    android:fontFamily="@font/opensans_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.07"
+                    android:text="Take a picture"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/flowerIdentifyText"
+                android:layout_below="@id/identifyRelative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/opensans_bold"
+                android:textAllCaps="true"
+                android:includeFontPadding="false"
+                android:text="Identify flower"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:letterSpacing="0.06"/>
+
+            <TextView
+                android:id="@+id/availableFlowers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flowerIdentifyText"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/opensans_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.08"
+                android:lineSpacingMultiplier="0.9"
+                android:text="@string/available_flowers"
+                android:textAlignment="inherit"
+                android:textColor="@color/defaultColor"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+            <RelativeLayout
+                android:id="@+id/flowerIdentifyRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/availableFlowers"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/second_card_back"
+                android:elevation="4dp"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_centerHorizontal="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sunflower" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Take a flower picture"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/next" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/get_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/google1"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:text="Get the result"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/detectBtn_for_flower"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_below="@id/linear2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/take_picture_button_style"
+                    android:fontFamily="@font/opensans_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.07"
+                    android:text="Take a picture"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:theme="@style/NavDrawerFontStyle"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

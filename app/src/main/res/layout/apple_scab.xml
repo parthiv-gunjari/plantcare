@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/white_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple Scab"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:fontFamily="@font/google1"
+            android:letterSpacing="0.04"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apple_scab"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/google1"
+            android:letterSpacing="0.04"
+            android:includeFontPadding="false" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_round_check_24"
+        android:background="@drawable/precaution_select"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/l1"
+        app:layout_constraintTop_toTopOf="@id/l1"
+        app:layout_constraintStart_toStartOf="@id/l1"
+        app:layout_constraintEnd_toEndOf="@id/l1"/>
+
+    <Button
+        android:id="@+id/got_it_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login_riple"
+        android:text="Got it!"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/google1"
+        android:letterSpacing="0.07"
+        android:textSize="17sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/l1"
+        app:layout_constraintEnd_toEndOf="@id/l1"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        app:layout_constraintBottom_toBottomOf="@id/l1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

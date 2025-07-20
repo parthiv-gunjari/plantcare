@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/detect"
+        android:title="Detect"
+        android:icon="@drawable/detect_iconn"/>
+
+    <item
+        android:id="@+id/crops"
+        android:title="Your crops"
+        android:icon="@drawable/plant"/>
+
+    <item
+        android:id="@+id/weather"
+        android:title="Weather"
+        android:icon="@drawable/weather_iconn"/>
+
+    <item
+        android:id="@+id/community"
+        android:title="Community"
+        android:icon="@drawable/community"/>
+
+</menu>

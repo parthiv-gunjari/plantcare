@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainl"
+    android:background="@drawable/main_leaf_image"
+    tools:context=".activities.FirstActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack_overlay"/>
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:text="Hi there"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/google1" />
+
+
+    <ImageView
+        android:id="@+id/pixelimage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/hello"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/samadhan_logo_remove" />
+
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pixelbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:clickable="true"
+        android:text="Welcome to Samadhaan"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:fontFamily="@font/google1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pixelbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_style"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:theme="@style/AppTheme.Button"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/loading_spinner"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="8dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:cpb_color="@color/colorPrimary"
+            app:cpb_colors="@array/progress_colors"
+            app:cpb_max_sweep_angle="300"
+            app:cpb_min_sweep_angle="10"
+            app:cpb_rotation_speed="1.0"
+            app:cpb_stroke_width="2dp"
+            app:cpb_sweep_speed="1.0" />
+
+        <TextView
+            android:id="@+id/progresstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Loading"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:fontFamily="@font/google1"/>
+    </LinearLayout>
+
+</RelativeLayout>

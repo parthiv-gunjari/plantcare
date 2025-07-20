@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".bottomactivities.TensorActivity">
+
+    <LinearLayout
+        android:id="@+id/rel1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/action_background"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take action"
+            android:textSize="17sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="8dp"/>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/mGalleryButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/gallery_icon"
+                android:fontFamily="@font/google1"
+                android:includeFontPadding="false" />
+
+            <Button
+                android:id="@+id/mCameraButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/camera"
+                android:fontFamily="@font/google1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/login_white_background">
+
+            <ImageView
+                android:id="@+id/mPhotoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:src="@drawable/scan_leaf"
+                android:background="@drawable/login_white_background"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mDetectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_below="@id/cardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:alpha="0"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:background="@drawable/detect_button_style"
+            android:fontFamily="@font/opensans_semibold"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.1"
+            android:text="@string/buttonDiagnose"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mResultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mDetectButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:alpha="0"
+            android:fontFamily="@font/opensans_bold"
+            android:padding="4dp"
+            android:text="@string/resultTxt"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/mShowPrecaution"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_below="@id/mResultTextView"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0"
+            android:background="@drawable/main_button_ripple"
+            android:fontFamily="@font/google1"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.07"
+            android:onClick="precaution"
+            android:padding="5dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/showPrecautions"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/demoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:alpha="1"
+            android:fontFamily="@font/google1"
+            android:letterSpacing="0.04"
+            android:text="@string/detect_txt"
+            android:textColor="@color/colorWhite"
+            android:lineSpacingMultiplier="0.9"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/demoArrow"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:src="@drawable/arrow_below"
+            android:layout_below="@id/demoTxt"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:rotation="-20"
+            android:alpha="1"
+            app:tint="@color/colorWhite" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
